@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.almsary.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin or private pages
+Disallow: /admin/
+Disallow: /private/

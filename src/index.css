@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    --primary: 210 85% 25%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-light: 210 85% 35%;
+    --primary-dark: 210 85% 18%;
+
+    --secondary: 150 60% 45%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --secondary-light: 150 60% 55%;
+
+    --accent: 35 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 85% 25%;
+
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 85% 25%), hsl(210 85% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 85% 20%), hsl(210 85% 30%));
+    --gradient-card: linear-gradient(to bottom, hsl(0 0% 100%), hsl(210 40% 98%));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 20px -5px hsl(210 85% 25% / 0.1);
+    --shadow-medium: 0 8px 30px -8px hsl(210 85% 25% / 0.15);
+    --shadow-strong: 0 15px 40px -10px hsl(210 85% 25% / 0.25);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 30% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 215 30% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 30% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 210 85% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 60% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 35 90% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 210 85% 45%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-almarai;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+}
